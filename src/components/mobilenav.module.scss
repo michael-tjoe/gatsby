@@ -1,0 +1,39 @@
+@import "colors.scss";
+@import "breakpoints.scss";
+
+.parent-submenu {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+
+  .nav-accordion {
+    transition: 0.2s ease-out;
+    display: flex;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    top: 0;
+    font-size: 18px;
+    &.active {
+      transform: rotate(90deg);
+    }
+  }
+}
+.child-menu {
+  display: none;
+  &.active {
+    display: flex;
+  }
+}

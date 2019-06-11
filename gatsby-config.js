@@ -1,11 +1,35 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Xing Lie Cargo | Jasa Forwarder dari China | Cargo Import Door to Door`,
+    description: `Jasa ekspedisi forwarder import borongan door to door service dari China, Korea, Singapore, Thailand, Taiwan, dll ke Indonesia by sea and air`,
+    author: `Cynthia Tjoe`,
+    menuLinks: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "Service",
+        link: "/service",
+      },
+      {
+        name: "Contact",
+        link: "/contact",
+      },
+      {
+        name: "About",
+        link: "/about",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,6 +51,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    "gatsby-plugin-offline",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["./src/styles"],
+        cssLoaderOptions: {
+          camelCase: false,
+        },
+      },
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

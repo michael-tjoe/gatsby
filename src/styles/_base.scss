@@ -1,0 +1,20 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.nav-link {
+  display: block;
+}
+#mainMenu > li > .nav-link.active {
+  color: $primary !important;
+}
